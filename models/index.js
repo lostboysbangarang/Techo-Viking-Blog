@@ -7,8 +7,7 @@ User.hasMany(Post, {
     onDelete: `CASCADE`
 });
 
-Post.belongsTo(User, {
-    forigenKey: `user_id`
-});
+
+
 
 module.exports = { User, Post, Comment };

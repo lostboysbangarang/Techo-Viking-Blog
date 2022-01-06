@@ -15,6 +15,14 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        user_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            refrences: { 
+                model: `user`,
+                key: `user_name`,
+            }
+        },
         body: {
             type: DataTypes.TEXT,
             allowNull: false
@@ -22,7 +30,7 @@ Post.init(
         date_created: {
             type: DataTypes.DATETIME,
             allowNull: false,
-            defaultValue: Date.NOW
+            defaultValue: DateTime.now()
         },
         user_id: {
             type: DataTypes.INTEGER,
